@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="knop">
+        knop drukken
+    </button>
+    
+    <section class="playlist-card-section">
+        <figure class="card-image-figure">
+            <img class="playlist-image-cover" src="../assets/coverart-4.png" alt="Cover Image">
+        </figure>
+        <h3 class="title-playlist-card-section">Storytime adventures of the friendly turtle</h3>
+        <a href="" class="playlist-play-button" aria-label="Play audio the Pig and cow enjoy their day">
+            <span class="play-icon" aria-hidden="true">▶</span>
+            <span class="play-time" aria-hidden="true">93 min. 23 sec</span>
+        </a>
+    </section>
+
+    <style>
+        .playlist-card-section {
+            background-color: aqua;
+            display: inline-block;
+        }
+    </style>
+
+<section id="sectionsContainer">
+
+</section>
+
+        
+
+
+</body>
+
+<script>
+
+document.getElementById('knop').addEventListener('click', function() {
+console.log("hallod")
+
+
+
+
+
+
+    newSection.innerHTML = `
+    <section class="playlist-card-section">
+        <figure class="card-image-figure">
+            <img class="playlist-image-cover" src="../assets/coverart-4.png" alt="Cover Image">
+        </figure>
+        <h3 class="title-playlist-card-section">Storytime adventures of the friendly turtle</h3>
+        <a href="" class="playlist-play-button" aria-label="Play audio the Pig and cow enjoy their day">
+            <span class="play-icon" aria-hidden="true">▶</span>
+            <span class="play-time" aria-hidden="true">93 min. 23 sec</span>
+        </a>
+    </section>
+`;
+
+    // document.getElementById('sectionsContainer').appendChild(newSection);
+  });
+</script>
+</html>
