@@ -9,7 +9,7 @@ document.getElementById('knop').addEventListener('click', function() {
     // met innerhtml zorg ik ervoor dat de gemaakte section deze html bevat.
     makeNewCard.innerHTML = `
             <figure class="card-image-figure">
-                <img class="playlist-image-cover" src="../assets/coverart-4.png" alt="Cover Image">
+                <img class="playlist-image-cover" src="./assets/coverart-4.png" alt="Cover Image">
             </figure>
             <h3 class="title-playlist-card-section">Storytime adventures of the friendly turtle</h3>
             <a href="" class="playlist-play-button" aria-label="Play audio the Pig and cow enjoy their day">
