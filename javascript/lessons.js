@@ -53,11 +53,16 @@ document.getElementById('knop').addEventListener('click', function() {
 
 
 // voor de scroljlknop
-document.getElementById("scroll-button").addEventListener("click", function() { // click event . dit luistert of er op de knop wordt gedrukt
-    const playlistSection = document.querySelector(".playlist-section"); // playlist-section is de parent-container waar alle playlist-cards in zitten.
-    playlistSection.scrollTo({ // geeft aan dat je wilt gaan scrollen
-      left: playlistSection.scrollWidth, // geeft aan dat je de gehele breedte naar rechts wilt scrollen
-      behavior: 'smooth' //zorgt voor een vloeiende beweging
+// click event . dit luistert of er op de knop wordt gedrukt
+document.getElementById("scroll-button").addEventListener("click", function() { 
+   // playlist-section is de parent-container waar alle playlist-cards in zitten.
+    const playlistSection = document.querySelector(".playlist-section");
+    // geeft aan dat je wilt gaan scrollen
+    playlistSection.scrollTo({ 
+    // geeft aan dat je de gehele breedte naar rechts wilt scrollen
+      left: playlistSection.scrollWidth,
+      //zorgt voor een vloeiende scrolbeweging
+      behavior: 'smooth' 
     });
   });
 
