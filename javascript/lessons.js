@@ -30,7 +30,7 @@ document.getElementById('knop').addEventListener('click', function() {
 
 
 // document.getElementById('addSectionButton').addEventListener('click', function() {
-//     var newSection = document.createElement('section');
+//     let newSection = document.createElement('section');
 
 //     newSection.classList.add('new-section');
 
