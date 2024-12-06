@@ -1,48 +1,58 @@
-
-
-
-
-
-
-document.getElementById('addSectionButton').addEventListener('click', function() {
-    var newSection = document.createElement('section');
-
-    newSection.classList.add('new-section');
-
-    newSection.innerHTML = `
-    <section class="playlist-card-section">
-        <figure class="card-image-figure">
-            <img class="playlist-image-cover" src="../assets/coverart-4.png" alt="Cover Image">
-        </figure>
-        <h3 class="title-playlist-card-section">Storytime adventures of the friendly turtle</h3>
-        <a href="" class="playlist-play-button" aria-label="Play audio the Pig and cow enjoy their day">
-            <span class="play-icon" aria-hidden="true">▶</span>
-            <span class="play-time" aria-hidden="true">93 min. 23 sec</span>
-        </a>
-    </section>
-`;
-
-    document.getElementById('sectionsContainer').appendChild(newSection);
+// hier wordt de button geselecteerd aan de hand van de id die gekoppeld is aan de button,
+// vervolgens heb ik een eventlistiners gebruikt dat kijkt of er op de knop wordt gedrukt
+document.getElementById('knop').addEventListener('click', function() {
+  // hier heb ik een variabele makenewcard waarin ik ervoor zorg dat het met createlement een html section aanmaakt bij elke klik.
+      let makeNewCard = document.createElement('section');
+      // er wordt een class genaamd playlist-cards-section toegoevgt aan de section
+      makeNewCard.classList.add('playlist-card-section');  // Voeg de juiste class toe
+  
+      // met innerhtml zorg ik ervoor dat de gemaakte section deze html bevat.
+      makeNewCard.innerHTML = `
+              <figure class="card-image-figure">
+                  <img class="playlist-image-cover" src="./assets/coverart-4.png" alt="Cover Image">
+              </figure>
+              <h3 class="title-playlist-card-section">Storytime adventures of the friendly turtle</h3>
+              <a href="" class="playlist-play-button" aria-label="Play audio the Pig and cow enjoy their day">
+                  <span class="play-icon" aria-hidden="true">▶</span>
+                  <span class="play-time" aria-hidden="true">93 min. 23 sec</span>
+              </a>
+      `;
+      
+      // in mijn html code heb ik een section met de id sectioncontainer met appenchild zorg ik ervoor dat de gemaakte section makenewcard
+      // als een child wordt toegevoegt aan die html section. dus 
+      document.getElementById('sectionsContainer').appendChild(makeNewCard);
+  
   });
+  
 
 
 
 
 
-//   Popover sectie voor uitleg kleuren 
+// document.getElementById('addSectionButton').addEventListener('click', function() {
+//     var newSection = document.createElement('section');
 
-//   <section popover class="color-definition" id="popover-colors">
-//       <h3>What do the colors mean?</h3>
-//       <ul>
-//           <li class="popover-item-1">Passion and energy / a powerful, energetic voice (Female)</li>
-//           <li class="popover-item-2">Creativity and friendliness / a cheerful, inviting voice (Male)</li>
-//           <li class="popover-item-3">Harmony and stability / a calm, balanced voice (Female)</li>
-//           <li class="popover-item-4">Reliability and serenity / a thoughtful, reliable voice (Male)</li>
-//       </ul>
-//   </section>
+//     newSection.classList.add('new-section');
+
+//     newSection.innerHTML = `
+//     <section class="playlist-card-section">
+//         <figure class="card-image-figure">
+//             <img class="playlist-image-cover" src="../assets/coverart-4.png" alt="Cover Image">
+//         </figure>
+//         <h3 class="title-playlist-card-section">Storytime adventures of the friendly turtle</h3>
+//         <a href="" class="playlist-play-button" aria-label="Play audio the Pig and cow enjoy their day">
+//             <span class="play-icon" aria-hidden="true">▶</span>
+//             <span class="play-time" aria-hidden="true">93 min. 23 sec</span>
+//         </a>
+//     </section>
+// `;
+
+//     document.getElementById('sectionsContainer').appendChild(newSection);
+//   });
 
 
-// voor de scrollknop
+
+// voor de scroljlknop
 document.getElementById("scroll-button").addEventListener("click", function() { // click event . dit luistert of er op de knop wordt gedrukt
     const playlistSection = document.querySelector(".playlist-section"); // playlist-section is de parent-container waar alle playlist-cards in zitten.
     playlistSection.scrollTo({ // geeft aan dat je wilt gaan scrollen
