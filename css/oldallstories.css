@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #391a6a;
+    font-family: "Lilita One", sans-serif;
+    line-height: 1.5;
+  }
+  
+  .return-arrow {
+    position: absolute;
+    z-index: 9999;
+    margin: 1em;
+  }
+  
+  .return-arrow a:hover {
+    color: white;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  #wave {
+    margin-bottom: 5em;
+  }
+  
+  .mid-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px 50px 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+    gap: 5px;
+  
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 50px 50px 50px 50px;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 10px;
+    }
+  }
+  
+  .mid-section-title {
+    grid-column: 1 / 5;
+    grid-row: 1;
+    padding-bottom: 2em;
+    color: #ffffff;
+  }
+  .mid-section h2 {
+    font-size: 100px;
+    font-weight: bolder;
+    letter-spacing: 18px;
+  
+    @media (max-width: 737px) {
+      font-size: 80px;
+    }
+  
+    @media (max-width: 600px) {
+      font-size: 50px;
+    }
+  
+    @media (max-width: 500px) {
+      font-size: 40px;
+    }
+  
+    @media (max-width: 320px) {
+      font-size: 40px;
+      letter-spacing: 5px;
+    }
+  }
+  
+  .searchbar {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  
+    @media (max-width: 600px) {
+      grid-column: 2 / 3;
+      grid-row: 2;
+    }
+  }
+  
+  .item-1 {
+    grid-column: 1 / 2;
+    grid-row: 3;
+    justify-self: center;
+  }
+  
+  .item-2 {
+    grid-column: 2 / 3;
+    grid-row: 3;
+    justify-self: center;
+  
+    @media (max-width: 600px) {
+      grid-column: 1 / 2;
+      grid-row: 4;
+    }
+  }
+  
+  .item-3 {
+    grid-column: 3 / 4;
+    grid-row: 3;
+    justify-self: center;
+  }
+  
+  .item-4 {
+    grid-column: 4 / 5;
+    grid-row: 3;
+    justify-self: center;
+  
+    @media (max-width: 600px) {
+      grid-column: 3 / 4;
+      grid-row: 4;
+    }
+  }
+  
+  .item-1,
+  .item-2,
+  .item-3,
+  .item-4 {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  
+    @media (max-width: 815px) {
+      width: auto;
+    }
+  
+    @media (max-width: 600px) {
+      width: 175px;
+    }
+  
+    @media (max-width: 320px) {
+      width: 130px;
+    }
+  }
+  
+  label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  select {
+    padding: 10px;
+    border: 2px solid #9264f4;
+    border-radius: 7px;
+    background-color: #9264f4;
+    font-size: 16px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    text-align: center;
+    font-size: larger;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 3px;
+  
+    @media (max-width: 600px) {
+      font-size: small;
+      font-weight: 800;
+    }
+  }
+  
+  select:hover {
+    border-color: #ffffff;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #ffffff;
+  }
+  
+  .searchbar {
+    /* Plaatst het element in de eerste rij van de grid, met een start en eindpositie op rij 1. Ik kon hier ook alleen 1 schrijven */
+    grid-row: 1;
+  
+    /* Plaatst het element in de eerste kolom van de grid, met een start- en eindpositie op kolom 1. Ik kon hier ook alleen 1 schrijven */
+    grid-column: 2 / 4;
+    width: 100%;
+    height: 3em;
+    border-radius: 9px;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 0.5em;
+    font-size: 1.2rem;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    margin-bottom: -4em;
+    letter-spacing: 3px;
+  }
+  
+  .searchbar:hover {
+    background-color: #ffffff;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .card {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+  }
+  
+  .card-left {
+    margin-right: 15px;
+  }
+  
+  .card-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    flex-grow: 1;
+  }
+  
+  
+  
+  .flag-icon {
+    scale: 0.8;
+  } 
+  
+  .card-description {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+  
+    @media (max-width: 700px) {
+        display: none;
+      }
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .play-button {
+    background-color: #9264f4;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .play-icon {
+    margin-right: 5px;
+  }
+  
+  .card-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-actions button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #666;
+  }
+  
+  .card-actions button:hover {
+    color: black;
+    scale: 1.09;
+  
+  }
+  
+  .card:hover {
+    transform: scale(1.01);
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+    }
+  
+    .card-left {
+      margin-right: 15px;
+    }
+  
+    .card-footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .play-button {
+      margin-bottom: 10px;
+    }
+  }
+  

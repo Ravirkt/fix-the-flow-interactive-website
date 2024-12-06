@@ -1,0 +1,374 @@
+/* Schrijf hier de verschillende stijlen, die gedeeld gaan
+   worden door jullie projecten */
+
+   body {
+    /*kleuren*/
+    --main-color: #cfd8ed;
+    --general-color: #434b75;
+    --button-text-color: #fff;
+    --important-color: #008811;
+    --error-color: #d40d0d;
+    --home-color: #a4cef8;
+    --testing-color: #B7C7F0;
+    --lessons-color: #C9BDF9;
+    --statistics-color: #99d1b3;
+    --profile-color: #f4c089;
+    --select-form-color: #9264f4;
+    --background-color: #cfd8ed;
+    --wolkje-color:#fff;
+    --background-menu:rgb(36, 36, 36, 0.9);
+    --lessons-background: #391a6a;
+    --lessons-title-color: #fff;
+  
+    /*font-size*/
+    --heading1: 46px;
+    --heading2: 24px;
+    --heading3: 20px;
+    --heading4: 15px;
+    --heading5: 12px;
+    --body-text-paragraph: 16px;
+    --button-text: 14px;
+    --text-bold: bold ;
+  
+    /*font-family*/
+    --font-poppins:"Poppins", sans-serif;
+  
+  /* anker href link */
+  --text-decoration-anker: none;
+  --font-color-anker: black;
+  
+  /* anker href link hover */
+  --border-bottom-anker: 2px solid black;
+  --underline-text-hover:underline;
+  
+    /* unordered list */
+    --ul-dot-styling: square;
+  
+    /* table */
+    --th-background-color: #9264f4;
+    --th-border: 1px solid black;
+    --td-border: 1px solid black;
+    --table-border-collapse: collapse;
+    --tr-padding: 5px;
+    --td-padding: 5px;
+    --tr-child-even-background-color: #ffffff;
+    --tr-child-odd-background-color: #efd1ff;
+  
+    /* text-form */
+    --width-text-form: 30%;
+    --height-text-form: 0.5rem;
+    --border-radius-text-form: 9px;
+    --border-text-form: 2px solid black;
+    --padding-text-form: 0.5rem;
+    --font-size-text-form: 1rem;
+    --background-color-text-form: rgb(255, 255, 255);
+    --letter-spacing-text-form: 1px;
+  
+    /* input type radio */
+    --appearance-radio-input: none;
+    --width-hight-radio-input: 15px;
+    --border-radio-input: 2px solid #fff;
+  
+    /* input type radio when checked */
+    --background-color-radio-input-checked: #444B75;
+    --border-color-radio-input-checked: #444B75;
+  
+    /* input type checkbox */
+    --appearance-checkbox-input: none;
+    --width-hight-checkbox-input: 15px;
+    --border-checkbox-input: 2px solid #fff;
+  
+    /* input type checkbox when checked */
+    --background-color-checkbox-input-checked: #444B75;
+    --border-color-checkbox-input-checked: #444B75;
+  
+    /* input type searchbar */
+    --width-searchbar: 30%;
+    --height-searchbar: 0.5rem;
+    --border-radius-searchbar: 9px;
+    --border-searchbar: 2px solid black;
+    --padding-searchbar: 0.5rem;
+    --font-size-searchbar: 1rem;
+    --background-color-searchbar: rgb(255, 255, 255);
+    --letter-spacing-searchbar: 1px;
+  
+    /* input type cellphone number */
+    --width-cellphone-number: 30%;
+    --height-cellphone-number: 0.2rem;
+    --border-raduis-cellphone-number: 9px;
+    --border-cellphone-number: 2px solid black;
+    --padding-cellphone-number: 0.5rem;
+    --font-size-cellphone-number: 1rem;
+    --background-color-cellphone-number: rgb(255, 255, 255);
+    --letter-spacing-cellphone-number: 1px;
+  
+    /* submit button */
+    --background-color-submit-button: #444B75;
+    --button-text-color: #fff;
+    --padding-submit-button: 10px 20px;
+    --border-radius-submit-button: 12px;
+    --font-size-submit-button: 16px;
+    --border-submit-button: none;
+  
+  /* all buttons hover*/
+  --background-gradient-all-buttons: linear-gradient(90deg, rgba(85,104,231,1) 72%, rgba(127,127,242,0.6795180722891566) 100%);
+  
+    /* normal button */
+    --background-color-button: #444B75;
+    --button-text-color: #fff;
+    --padding-button: 10px 20px;
+    --border-radius-button: 12px;
+    --font-size-button: 14px;
+    --border-button: none;
+  
+    /* option selector */
+    --background-color-select: #9264f4;
+    --letter-spacing: 3px;
+    --font-size: 14px;
+    --font-weight: larger;
+    --font-color: white;
+    --border-color-width: 2px solid #9264f4;
+    --border-radius: 5px;
+  
+    /* hover effecten */
+    --hover-focus-select-button: #ffffff;
+    --hover-transition: ;
+  }
+  
+
+
+* {
+  font-family: var(--font-poppins);
+  /* background-color: #cfd8ed; */
+}
+
+/* Kleuren */
+figure:nth-child(3) code {
+  background-color: var(--main-color);
+  border: 1px solid black;
+}
+
+figure:nth-child(4) code {
+  background-color: var(--general-color);
+}
+
+figure:nth-child(5) code {
+  background-color: var(--button-text-color);
+  border: 1px solid black;
+}
+
+figure:nth-child(6) code {
+  background-color: var(--important-color);
+}
+
+figure:nth-child(7) code {
+  background-color: var(--error-color);
+}
+
+figure:nth-child(8) code {
+  background-color: var(--select-form-color);
+}
+
+figure:nth-child(10) code {
+  background-color: var(--home-color);
+  border: 1px solid black;
+}
+
+figure:nth-child(11) code {
+    background-color: var(--testing-color);
+    border: 1px solid black;
+  }
+
+  figure:nth-child(12) code {
+    background-color: var(--lessons-color);
+    border: 1px solid black;
+  }
+
+  figure:nth-child(13) code {
+    background-color: var(--statistics-color);
+    border: 1px solid black;
+  }
+
+  figure:nth-child(14) code {
+    background-color: var(--profile-color);
+    border: 1px solid black;
+  }
+
+/* Typografie */
+
+h1 {
+  font-size: var(--heading1);
+  font-family: var(--font-poppins);
+}
+
+h2 {
+  font-size: var(--heading2);
+  font-family: var(--font-poppins);
+}
+
+h3 {
+  font-size: var(--heading3);
+  font-family: var(--font-poppins);
+}
+
+h4 {
+  font-size: var(--heading4);
+  font-family: var(--font-poppins);
+}
+
+h5 {
+  font-size: var(--heading5);
+  font-family: var(--font-poppins);
+}
+
+/* simpele alineas */
+p {
+  font-size: var(--body-text-paragraph);
+  font-family: var(--font-poppins);
+}
+
+/* unorderend list */
+
+ul {
+  list-style-type: var(--ul-dot-styling);
+}
+
+/* table */
+th {
+  background-color: var(--th-background-color);
+  border: var(--td-border);
+}
+
+tr {
+  padding: var(--tr-padding);
+}
+
+td {
+  border: var(--td-border);
+  padding: var(--td-padding);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+  background-color: var(--tr-child-even-background-color);
+}
+
+tr:nth-child(odd) {
+  background-color: var(--tr-child-odd-background-color);
+}
+
+/* Formulier elementen */
+/* input text form */
+.input-text-form {
+  width: var(--width-text-form);
+  height: var(--height-text-form);
+  border-radius: var(--border-radius-text-form);
+  border: var(--border-text-form);
+  padding: var(--padding-text-form);
+  font-size: var(--font-size-text-form);
+  background-color: var(--background-color-text-form);
+  letter-spacing: var(--letter-spacing-text-form);
+}
+
+a {
+    text-decoration: var(--text-decoration-anker);
+    color: var(--font-color-anker);
+
+    &:hover {
+        border-bottom: var(--border-bottom-anker);
+      }
+
+
+}
+
+
+
+/* input radio */
+input[type="radio"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #000000;
+}
+
+input[type="radio"]:checked {
+  background-color: #444B75;
+  border-color: #000000;
+}
+
+/* input checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #000000;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #444B75;
+  border-color: #000000;
+}
+
+/* searchbar */
+input[type="search"], input[type="tel"] {
+  width: 30%;
+  height: 0.5em;
+  border-radius: 9px;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 0.5em;
+  font-size: 1rem;
+  background-color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+}
+
+/* submit button */
+input[type="submit"] {
+  background-color: #444B75;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  border: none;
+
+  &:hover {
+    background: var(--background-gradient-all-buttons);
+  }
+}
+
+/* normal button */
+button[type="button"] {
+  background-color: #444B75;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  border: none;
+
+  &:hover {
+    background: var(--background-gradient-all-buttons);
+  }
+
+  
+}
+
+select {
+  background-color: var(--background-color-select);
+  letter-spacing: var(--letter-spacing);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  color: var(--font-color);
+  border: var(--border-color-width);
+  border-radius: var(--border-radius);
+  padding: 10px;
+  transition: var(--border-color-width);
+
+  &:hover, &:focus {
+    border-color: var(--hover-focus-select-button);
+  }
+}
+
+
+

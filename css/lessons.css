@@ -1,0 +1,485 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--lessons-background);
+}
+
+noscript {
+  color: white;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:  5em 5em;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .return-arrow a {
+  position: absolute;
+  z-index: 9999;
+  margin: 1em;
+  text-decoration: none;
+
+  &:hover {
+    border: none;
+  }
+}
+
+.return-arrow a:hover {
+  color: white;
+} */
+
+.page-title {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  margin-top: 2.5em;
+  margin-bottom: 3em;
+  text-align: center;
+  color: var(--lessons-title-color);
+  font-weight: 500;
+  font-size: 100px;
+  font-weight: bolder;
+  letter-spacing: 18px;
+  text-align: center;
+  justify-content: center;
+}
+
+.header-buttons {
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  grid-column: 1 / 4;
+  grid-row: 3;
+  justify-content: flex-start;
+  gap: 1em;
+  text-align: center;
+  
+}
+
+.header-buttons::-webkit-scrollbar {
+  display: none;
+}
+
+.header-button {
+  font-size: 18px;
+  padding: 12px 24px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.header-button:hover {
+  background-color: var(--background-gradient-all-buttons);
+}
+
+@media (max-width: 700px) {
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 1em;
+    margin: 0 1em;
+  }
+
+  .page-title {
+    grid-column: 1 / 2;
+    font-size: 5em;
+    letter-spacing: 5px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header-buttons {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    justify-content: flex-start;
+  }
+
+  .header-button {
+    min-width: 200px;
+  }
+
+  .header-buttons {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+
+  .header-buttons button {
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .page-title {
+    font-size: 80px;
+    letter-spacing: 15px;
+  }
+}
+
+.header-button {
+  /* <flex-grow> <flex-shrink> <flex-basis> */
+  flex: 0 0 auto;
+  width: 30%;
+  height: 40px;
+  margin-right: 1em;
+  border-radius: 10px;
+  background-color: #139943;
+  border: none;
+  color: var(--button-text-color);
+  font-size: medium;
+  letter-spacing: 5px;
+  text-align-last: justify;
+
+  &:hover {
+    border: 1px solid #fff;
+  }
+
+  &:nth-child(1) {
+    margin-left: 3em;
+  }
+}
+
+/* De titel OWN playlist */
+.title-playlist-article {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  color: var(--lessons-title-color);
+  font-weight: 500;
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: left;
+  margin-left: 0.5em;
+}
+
+/* De playlist cards */
+.playlist-section {
+  display: flex;
+  gap: 1em;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 1em;
+  margin: 1.5em;
+  padding-right: 1em;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+.playlist-card-section {
+  flex: 0 0 auto;
+  width: 12em;
+  height: auto;
+  padding: 1em;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.playlist-card-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.title-playlist-card-section {
+  text-align: left;
+  font-size: small;
+}
+
+.playlist-play-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+
+  &:hover {
+    border: none;
+  }
+}
+
+.play-icon {
+  background-color: var(--background-color-button);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+
+  &:hover {
+    background-color: #3a54de;
+  }
+}
+
+.play-time {
+  font-size: small;
+
+  &:hover {
+    border-bottom: var(--border-bottom-anker);
+  }
+}
+
+/* De card voor maken van een nieuwe playlist */
+.make-playlist-button-card {
+  flex: 0 0 auto;
+  width: 12em;
+  padding: 1em;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+  color: #fff;
+
+  &:hover {
+    border: 1px solid #fff;
+  }
+}
+
+.make-playlist-card-header {
+  margin-top: -1em;
+  color: #ffffff;
+  font-size: small;
+}
+
+.make-playlist-card-paragraph {
+  color: #ffffff;
+  font-size: smaller;
+}
+
+.make-playlist-button-card:not(
+    svg,
+    .make-playlist-card-header,
+    .title-make-playlist-card,
+    .make-playlist-card-paragraph
+  ) {
+  background-color: var(--background-color-button);
+}
+
+@media (max-width: 576px) {
+  .playlist-section {
+    gap: 10px;
+    margin: 0 10px;
+  }
+
+  .playlist-card-section {
+    width: 200px;
+  }
+
+  .playlist-section {
+    overflow-x: auto;
+  }
+}
+
+/* de all stories cards */
+.all-stories-parent-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px;
+  margin: 1em;
+
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  background-color: #ffffff;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.card-left {
+  flex: 0 0 100px;
+  margin: 0.5em;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  gap: 0.5em;
+}
+
+.card-title-3 {
+  font-size: small;
+  margin-bottom: 0;
+}
+
+.card-description {
+  font-size: x-small;
+  margin: 0;
+}
+
+.play-icon-all-stories {
+  background-color: var(--background-color-button);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: x-small;
+
+  &:hover {
+    background-color: #3a54de;
+  }
+}
+
+.play-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.play,
+.time-stamp {
+  text-decoration: none;
+
+  &:hover {
+    border: none;
+  }
+}
+
+.card-actions button {
+  background-color: #fff;
+  border: none;
+  transform: scale(0.8);
+  color: gray;
+  margin-left: -0.5em;
+
+  &:hover {
+    color: black;
+    scale: 1.09;
+  }
+
+  &.color-code-1 {
+    color: #ff0000;
+  }
+
+  &.color-code-2 {
+    color: #052fff;
+  }
+
+  &.color-code-3 {
+    color: #05a002;
+  }
+
+  &.color-code-4 {
+    color: rgb(255, 166, 1);
+  }
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
+
+/* popover dingentjes */
+
+.popover-item-1::marker {
+  color: #ff0000;
+  font-size: 1.5em;
+}
+
+.popover-item-2::marker{
+  color: #052fff;
+  font-size: 1.5em;
+}
+
+.popover-item-3::marker {
+  color: #05a002;
+  font-size: 1.5em;
+}
+
+.popover-item-4::marker {
+  color: rgb(255, 166, 1);
+  font-size: 1.5em;
+}
+
+[popover] {
+  border: 2px solid black;
+  padding: 1em;
+
+
+}
+
+
+/* buttons onder titles allstories en own playlost */
+
+/* scroll knop */
+#scroll-button {
+  color: var(--button-text-color);
+  font-weight: bolder;
+  margin-left: 2em;
+
+@media (max-width: 600px) {
+  margin-bottom: 1em;  
+}
+}
+
+/* filter knoppen */
+.filter-button-1 {
+  color: var(--button-text-color);
+  font-weight: bolder;
+  margin-left: 2em;
+}
+
+.filter-button-2 {
+  color: var(--button-text-color);
+  font-weight: bolder;
+  margin-left: 0.5em;
+}
+
+.filter-button-3  {
+  color: var(--button-text-color);
+  font-weight: bolder;
+  margin-left: 0.5em;
+}
