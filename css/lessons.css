@@ -240,13 +240,13 @@ figure {
 /* De card voor maken van een nieuwe playlist */
 .make-playlist-button-card {
   flex: 0 0 auto;
-  width: 12em;
+  width: 17em;
   padding: 1em;
   border-radius: 8px;
   text-align: center;
-  background-color: #fff;
   cursor: pointer;
-  color: #fff;
+  color: #ffffff;
+  border: none;
 
   &:hover {
     border: 1px solid #fff;
@@ -483,3 +483,5 @@ figure {
   font-weight: bolder;
   margin-left: 0.5em;
 }
+
+

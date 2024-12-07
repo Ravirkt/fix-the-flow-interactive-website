@@ -8,6 +8,8 @@
     <link rel="icon" href="./assets/mouse.png" type="image/png">
     <link rel="stylesheet" href="https://kitkatisvibing.github.io/look-and-feel-styleguide/tumimundo.css">
     <link rel="stylesheet" href="./css/lessons.css">
+    <link rel="stylesheet" href="./tomaat.css">
+
 </head>
 
 <body>
@@ -72,10 +74,38 @@
         <article class="playlist-section">
             <h2 hidden>Playlist cards</h2>
 
-            <!-- Card voor het maken van een nieuwe playlist -->
-<button id="knop">
+            <!-- popup -->
 
-            <section class="make-playlist-button-card">
+            <section popover id="form-popup" class="popover-section">
+                <button id="close-dropdown-button" class="dropdown-button"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M18.425 10.271C19.499 8.967 18.57 7 16.88 7H7.12c-1.69 0-2.618 1.967-1.544 3.271l4.881 5.927a2 2 0 0 0 3.088 0l4.88-5.927Z" clip-rule="evenodd"/>
+                  </svg>
+                  </button>
+
+
+                <div class="position-class">
+                <form>
+                    <label for="image-upload">Add playlist cover</label>
+                    <input type="file" id="image-upload" accept="image/*">
+                
+                    <label for="text-input">Add playlist title</label>
+                    <input type="text" id="text-input" placeholder="Insert playlist title" />
+                
+                    <button type="button">Verzenden</button>
+                </form>
+            </div>
+            </section>
+
+
+
+
+
+
+            <!-- Card voor het maken van een nieuwe playlist -->
+
+
+
+            <button id="open-dropdown-button" class="make-playlist-button-card">
                 <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     width="150" height="150" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -86,12 +116,10 @@
                     <h3 class="make-playlist-card-header">Make a Playlist!</h3>
                     <p class="make-playlist-card-paragraph">Add your favorite stories in one playlist</p>
                 </a>
-            </section>
-        </button>
+            </button>
 
-        <section id="sectionsContainer">
-            
-        </section>
+            <section id="sectionsContainer"></section>
+
 
             <!-- Spooky tales of the blueberry ghost -->
 
