@@ -1,5 +1,3 @@
-
-
 body {
   background-color: #391a6a;
   font-family: "Lilita One", sans-serif;
@@ -77,7 +75,6 @@ body {
 .searchbar {
   grid-column: 2 / 4;
   grid-row: 1;
- 
 
   @media (max-width: 600px) {
     grid-column: 2 / 3;
@@ -210,18 +207,6 @@ select:focus {
   background-color: #ffffff;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* 
 .card {
   display: flex;
@@ -337,11 +322,10 @@ select:focus {
   }
 } */
 
-
 /* de all stories cards */
 .all-stories-parent-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* De container heeft standaard drie kolommen van gelijke breedte */
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin: 1em;
 
@@ -354,11 +338,6 @@ select:focus {
   }
 }
 
-figure {
-  margin: 0;
-  padding: 0;
-}
-
 .card-content {
   display: flex;
   flex-direction: row;
@@ -366,7 +345,6 @@ figure {
   background-color: #ffffff;
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
-  width: 100%;
 
   &:hover {
     transform: scale(1.01);
@@ -394,43 +372,44 @@ figure {
 }
 
 .card-title-3 {
-  font-size: small;
+  font-size: 0.6em;
   margin-bottom: 0;
+
+  @media (min-width: 800px) {
+    font-size: 0.7em;
+  }
 }
 
 .card-description {
-  font-size: x-small;
+  font-size: 0.55em;
   margin: 0;
+
+  @media (min-width: 800px) {
+    font-size: 0.65em;
+  }
 }
 
 .play-icon-all-stories {
-  background-color: #3a54de;
+  background-color: var(--background-color-button);
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: x-small;
+  font-size: 0.5em;
+
 
   &:hover {
-    background-color: #f3a22b;
-  }
-}
-
-.play-time {
-  font-size: small;
-
-  &:hover {
-    border-bottom: var(--border-bottom-anker);
+    background-color: #3a54de;
   }
 }
 
 .play-button {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .play,
@@ -442,12 +421,29 @@ figure {
   }
 }
 
+.play-time {
+  font-size: xx-small;
+
+  @media (min-width: 800px) {
+    font-size: x-small;
+  }
+
+  &:hover {
+    border-bottom: var(--border-bottom-anker);
+  }
+}
+
 .card-actions button {
   background-color: #fff;
   border: none;
-  transform: scale(0.8);
+  transform: scale(0.5);
   color: gray;
-  margin-left: -0.5em;
+  margin-left: -1.45em;
+
+  @media (min-width: 800px) {
+    transform: scale(0.6);
+    margin-left: -1em;
+  }
 
   &:hover {
     color: black;
@@ -481,10 +477,6 @@ figure {
   flex-direction: row;
 }
 
-
-
-
-
 /* popover dingentjes */
 
 .popover-item-1::marker {
@@ -492,7 +484,7 @@ figure {
   font-size: 1.5em;
 }
 
-.popover-item-2::marker{
+.popover-item-2::marker {
   color: #052fff;
   font-size: 1.5em;
 }
@@ -510,5 +502,4 @@ figure {
 [popover] {
   border: 2px solid black;
   padding: 1em;
-
 }
