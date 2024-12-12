@@ -1,56 +1,130 @@
-// hier wordt de button geselecteerd aan de hand van de id die gekoppeld is aan de button,
-// vervolgens heb ik een eventlistiners gebruikt dat kijkt of er op de knop wordt gedrukt
-// document.getElementById('knop').addEventListener('click', function() {
-  // hier heb ik een variabele makenewcard waarin ik ervoor zorg dat het met createlement een html section aanmaakt bij elke klik.
-      // let makeNewCard = document.createElement('section');
-      // er wordt een class genaamd playlist-cards-section toegoevgt aan de section
-      // makeNewCard.classList.add('playlist-card-section');
-  
-      // met innerhtml zorg ik ervoor dat de gemaakte section deze html bevat.
-      // makeNewCard.innerHTML = `
-      //         <figure class="card-image-figure">
-      //             <img class="playlist-image-cover" src="./assets/coverart-4.png" alt="Cover Image">
-      //         </figure>
-      //         <h3 class="title-playlist-card-section">Storytime adventures of the friendly turtle</h3>
-      //         <a href="" class="playlist-play-button" aria-label="Play audio the Pig and cow enjoy their day">
-      //             <span class="play-icon" aria-hidden="true">▶</span>
-      //             <span class="play-time" aria-hidden="true">93 min. 23 sec</span>
-      //         </a>
-      // `;
-      
-      // in mijn html code heb ik een section met de id sectioncontainer met appenchild zorg ik ervoor dat de gemaakte section makenewcard
-      // als een child wordt toegevoegt aan die html section.
-      // document.getElementById('sectionsContainer').appendChild(makeNewCard);
-  
-  // });
-  
-
-
-
-
-
-
 // voor de scroljlknop
 // click event . dit luistert of er op de knop wordt gedrukt
-document.getElementById("scroll-button").addEventListener("click", function() { 
-   // playlist-section is de parent-container waar alle playlist-cards in zitten.
-    const playlistSection = document.querySelector(".playlist-section");
-    // geeft aan dat je wilt gaan scrollen
-    playlistSection.scrollTo({ 
+document.getElementById("scroll-button").addEventListener("click", function () {
+  // playlist-section is de parent-container waar alle playlist-cards in zitten.
+  const playlistSection = document.querySelector(".playlist-section");
+  // geeft aan dat je wil gaan scrollen
+  playlistSection.scrollTo({
     // geeft aan dat je de gehele breedte naar rechts wilt scrollen
-      left: playlistSection.scrollWidth,
-      //zorgt voor een vloeiende scrolbeweging
-      behavior: 'smooth' 
-    });
+    left: playlistSection.scrollWidth,
+    //zorgt voor een smooth scrolbeweging
+    behavior: "smooth",
+  });
+});
+
+// ---------------------------------------------------
+
+// openen van de form
+document
+  .getElementById("open-dropdown-button")
+  .addEventListener("click", function () {
+    const dropDownMenu = document.getElementById("form-popup");
+    dropDownMenu.classList.remove("close-open-form");
   });
 
-  
-  document.getElementById("open-dropdown-button").addEventListener("click", function() {
+// sluiten van de form
+document
+  .getElementById("close-dropdown-button")
+  .addEventListener("click", function () {
     const dropDownMenu = document.getElementById("form-popup");
-    dropDownMenu.classList.remove("close-open-form"); 
-});
+    dropDownMenu.classList.add("close-open-form");
+  });
 
-document.getElementById("close-dropdown-button").addEventListener("click", function() {
-    const dropDownMenu = document.getElementById("form-popup");
-    dropDownMenu.classList.add("close-open-form");   
-});
+// ---------------------------------------------------
+
+// new playlist card maken
+
+// een click event voor de button waarmee de form geopend word
+document
+  .getElementById("add-card-button")
+  .addEventListener("click", function () {
+    // de form elementen in een variabele zetten
+    const imageUpload = document.getElementById("image-upload");
+    const titleInput = document.getElementById("title-input").value;
+
+    // Controleer of er een bestand is geselecteerd en een titel is ingevuld
+    // if (!imageUpload.files || imageUpload.files.length === 0 || !titleInput) {
+    //   alert('Vul zowel een afbeelding als een titel in!');
+    //   return;
+    // }
+
+    // nieuwe section maken en class toevoegen
+    const newCard = document.createElement("section");
+    newCard.classList.add("playlist-card-section");
+
+    // figure element maken en een class toevoegen
+    const figure = document.createElement("figure");
+    figure.classList.add("card-image-figure");
+    // img element maken en een class toevoegen
+    const img = document.createElement("img");
+    img.classList.add("playlist-image-cover");
+    // input value van de form in de image alt zetten
+    img.alt = `Cover art of ${titleInput}`;
+
+    // bronnen voor filereader()
+    // https://www.youtube.com/watch?v=lzK8vM_wdoY&ab_channel=WebDevTutorials
+    // https://www.javascripture.com/FileReader
+    // https://developer.mozilla.org/en-US/docs/Web/API/FileReader
+
+    // de image die upgeload is in een variabele zetten
+    const selectedFile = imageUpload.files[0];
+
+    // Gebruik FileReader om te zorgen dat image pathname juist is voor het lezen
+    const reader = new FileReader();
+
+    // onload geeft aan dat de image is ingeladen
+    reader.onload = function (event) {
+      // dit geeft de pathnaam aan voor de image
+      img.src = event.target.result;
+    };
+    console.log(selectedFile);
+    reader.readAsDataURL(selectedFile);
+
+    // Voeg de afbeelding toe aan de figure
+    figure.appendChild(img);
+
+    // Voeg de figure toe aan de nieuwe card
+    newCard.appendChild(figure);
+
+    // h3 element maken en een class toevoegen
+    const h3 = document.createElement("h3");
+    h3.classList.add("title-playlist-card-section");
+    h3.textContent = titleInput;
+
+    // a element maken en class toeveogen
+    const playButton = document.createElement("a");
+    playButton.href = "#";
+    playButton.classList.add("playlist-play-button");
+    playButton.setAttribute("role", "button");
+    playButton.setAttribute("aria-label", `Start the playlist ${titleInput}`);
+
+// span element maken en class toevoegen
+    const datePlaylist = document.createElement("span");
+    datePlaylist.classList.add("add-date-playlist");
+    datePlaylist.textContent = "24/02/24";
+
+    // span element maken en class toevoegen
+    const playIcon = document.createElement("span");
+    playIcon.classList.add("play-icon");
+    playIcon.textContent = "▶";
+
+    // span element maken en class toevoegen
+    const playTime = document.createElement("span");
+    playTime.classList.add("play-time");
+    playTime.textContent = "34 min. 22 sec";
+
+    // elementen als child in element playbutton verwerken
+    playButton.appendChild(playIcon);
+    playButton.appendChild(playTime);
+
+    // elementen als child toevoegen aan de nieuw gemaakte card
+    newCard.appendChild(h3);
+    newCard.appendChild(playButton);
+
+    // de nieuwe card toevoegen aan de container met alle andere cards
+    document.querySelector(".playlist-section").appendChild(newCard);
+
+    // de inputvelden leegmaken voor weer nieuwe gegevens
+    document.getElementById("image-upload").value = "";
+    document.getElementById("title-input").value = "";
+  });

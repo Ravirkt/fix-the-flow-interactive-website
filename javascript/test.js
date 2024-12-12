@@ -25,9 +25,10 @@
 // });
 
 
-// meer beschrijving bij de bovenste buttons
 // een korte beschrijving bij own playlist
 // een korte beschrijving bij all stories
-// een korte beschrijving onder de titel
 // datum bij de cards wanneer welke playlist toegevoegt is.
 // meest recente card op begin zodat scrollknop weg kan
+
+
+
