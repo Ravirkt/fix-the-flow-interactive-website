@@ -120,6 +120,7 @@ document
     // elementen als child toevoegen aan de nieuw gemaakte card
     newCard.appendChild(h3);
     newCard.appendChild(playButton);
+    newCard.appendChild(datePlaylist);
 
     // de nieuwe card toevoegen aan de container met alle andere cards
     document.querySelector(".playlist-section").appendChild(newCard);
