@@ -70,30 +70,37 @@
 
     <main>
         <h2 class="title-playlist-article">Own playlist</h2>
-        <button type="button" id="scroll-button">Most recently</button>
+        <p class="sub-text-title">Browse through a collection of curated playlists and stories, or create your own to suit every mood and moment.</p>
+
+        <button type="button" id="scroll-button">Go to end</button>
         <article class="playlist-section">
             <h2 hidden>Playlist cards</h2>
 
             <!-- popup -->
 
             <section popover id="form-popup" class="popover-section">
-                <button id="close-dropdown-button" class="dropdown-button"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M18.425 10.271C19.499 8.967 18.57 7 16.88 7H7.12c-1.69 0-2.618 1.967-1.544 3.271l4.881 5.927a2 2 0 0 0 3.088 0l4.88-5.927Z" clip-rule="evenodd"/>
-                  </svg>
-                  </button>
+                <button id="close-dropdown-button" class="dropdown-button" name="close-form-button" aria-label="close the playlist form"><svg
+                        class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M18.425 10.271C19.499 8.967 18.57 7 16.88 7H7.12c-1.69 0-2.618 1.967-1.544 3.271l4.881 5.927a2 2 0 0 0 3.088 0l4.88-5.927Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
 
 
                 <div class="position-class">
-                <form>
-                    <label for="image-upload">Add playlist cover</label>
-                    <input type="file" id="image-upload" accept="image/*">
-                
-                    <label for="text-input">Add playlist title</label>
-                    <input type="text" id="text-input" placeholder="Insert playlist title" />
-                
-                    <button type="button">Verzenden</button>
-                </form>
-            </div>
+                    <form id="add-playlist-form">
+                        <label for="image-upload">Add playlist cover</label>
+                        <input type="file" id="image-upload" accept="image/png, image/jpg" class="image-validation" required>
+
+                        <label for="text-input">Add playlist title</label>
+                        <input type="text" id="title-input" class="title-validation" placeholder="Insert playlist title" required />
+
+                        <button id="add-card-button" type="submit">Make playlist</button>
+                    </form>
+                </div>
             </section>
 
 
@@ -121,20 +128,7 @@
             <section id="sectionsContainer"></section>
 
 
-            <!-- Spooky tales of the blueberry ghost -->
-
-            <section class="playlist-card-section">
-                <figure class="card-image-figure">
-                    <img class="playlist-image-cover" src="./assets/coverart-4.png"
-                        alt="Cover art of a ghost eating blueberries in a spooky setting">
-                </figure>
-                <h3 class="title-playlist-card-section">Spooky tales of the blueberry ghost</h3>
-                <a href="#" class="playlist-play-button" role="button"
-                    aria-label="Start the playlist Spooky tales of the blueberry ghost">
-                    <span class="play-icon">▶</span>
-                    <span class="play-time">35 min. 23 sec</span>
-                </a>
-            </section>
+            
 
             <!-- Best friends forever, cow and pig complete -->
 
@@ -149,23 +143,10 @@
                     <span class="play-icon">▶</span>
                     <span class="play-time">93 min. 21 sec</span>
                 </a>
+                <span class="add-date-playlist">23/4/24</span>
             </section>
 
-            <!-- Storytime adventures of the friendly turtle -->
-
-            <section class="playlist-card-section">
-                <figure class="card-image-figure">
-                    <img class="playlist-image-cover" src="./assets/coverart-2.png"
-                        alt="Cover art of a turtle skiing in the snow">
-                </figure>
-                <h3 class="title-playlist-card-section">Storytime adventures of the friendly turtle</h3>
-                <a href="#" class="playlist-play-button" role="button"
-                    aria-label="Start the playlist Storytime adventures of the friendly turtle">
-                    <span class="play-icon">▶</span>
-                    <span class="play-time">19 min. 45 sec</span>
-                </a>
-            </section>
-
+            
             <!-- Mama and baby piglet's adventures -->
 
             <section class="playlist-card-section">
@@ -179,6 +160,8 @@
                     <span class="play-icon">▶</span>
                     <span class="play-time">11 min. 23 sec</span>
                 </a>
+                <span class="add-date-playlist">23/4/24</span>
+
             </section>
 
             <!-- Whispers in the haunted forest -->
@@ -194,6 +177,8 @@
                     <span class="play-icon">▶</span>
                     <span class="play-time">65 min. 02 sec</span>
                 </a>
+                <span class="add-date-playlist">23/4/24</span>
+
             </section>
 
             <!-- Penguins adventuring in the Arctic -->
@@ -209,6 +194,8 @@
                     <span class="play-icon">▶</span>
                     <span class="play-time">67 min. 30 sec</span>
                 </a>
+                <span class="add-date-playlist">23/4/24</span>
+
             </section>
 
             <!-- Best friends forever, cow and pig complete -->
@@ -224,6 +211,8 @@
                     <span class="play-icon">▶</span>
                     <span class="play-time">93 min. 21 sec</span>
                 </a>
+                <span class="add-date-playlist">23/4/24</span>
+
             </section>
 
             <!-- Storytime adventures of the friendly turtle -->
@@ -239,6 +228,8 @@
                     <span class="play-icon">▶</span>
                     <span class="play-time">19 min. 45 sec</span>
                 </a>
+                <span class="add-date-playlist">23/4/24</span>
+
             </section>
 
             <!-- Mama and baby piglet's adventures -->
@@ -254,141 +245,8 @@
                     <span class="play-icon">▶</span>
                     <span class="play-time">11 min. 23 sec</span>
                 </a>
-            </section>
+                <span class="add-date-playlist">23/4/24</span>
 
-            <!-- Spooky tales of the blueberry ghost -->
-
-            <section class="playlist-card-section">
-                <figure class="card-image-figure">
-                    <img class="playlist-image-cover" src="./assets/coverart-4.png"
-                        alt="Cover art of a ghost eating blueberries in a spooky setting">
-                </figure>
-                <h3 class="title-playlist-card-section">Spooky tales of the blueberry ghost</h3>
-                <a href="#" class="playlist-play-button" role="button"
-                    aria-label="Start the playlist Spooky tales of the blueberry ghost">
-                    <span class="play-icon">▶</span>
-                    <span class="play-time">35 min. 23 sec</span>
-                </a>
-            </section>
-
-            <!-- Best friends forever, cow and pig complete -->
-
-            <section class="playlist-card-section">
-                <figure class="card-image-figure">
-                    <img class="playlist-image-cover" src="./assets/coverart-1.png"
-                        alt="Cover art of a cow and a pig, best friends forever">
-                </figure>
-                <h3 class="title-playlist-card-section">Best friends forever, cow and pig complete</h3>
-                <a href="#" class="playlist-play-button" role="button"
-                    aria-label="Start the playlist Best friends forever, cow and pig complete">
-                    <span class="play-icon">▶</span>
-                    <span class="play-time">93 min. 21 sec</span>
-                </a>
-            </section>
-
-            <!-- Storytime adventures of the friendly turtle -->
-
-            <section class="playlist-card-section">
-                <figure class="card-image-figure">
-                    <img class="playlist-image-cover" src="./assets/coverart-2.png"
-                        alt="Cover art of a turtle skiing in the snow">
-                </figure>
-                <h3 class="title-playlist-card-section">Storytime adventures of the friendly turtle</h3>
-                <a href="#" class="playlist-play-button" role="button"
-                    aria-label="Start the playlist Storytime adventures of the friendly turtle">
-                    <span class="play-icon">▶</span>
-                    <span class="play-time">19 min. 45 sec</span>
-                </a>
-            </section>
-
-            <!-- Mama and baby piglet's adventures -->
-
-            <section class="playlist-card-section">
-                <figure class="card-image-figure">
-                    <img class="playlist-image-cover" src="./assets/coverart-3.png"
-                        alt="Cover art of a mother and baby pig on an adventure">
-                </figure>
-                <h3 class="title-playlist-card-section">Mama and baby piglet's adventures</h3>
-                <a href="#" class="playlist-play-button" role="button"
-                    aria-label="Start the playlist Mama and baby piglet's adventures">
-                    <span class="play-icon">▶</span>
-                    <span class="play-time">11 min. 23 sec</span>
-                </a>
-            </section>
-
-            <!-- Whispers in the haunted forest -->
-
-            <section class="playlist-card-section">
-                <figure class="card-image-figure">
-                    <img class="playlist-image-cover" src="./assets/coverart-5.png"
-                        alt="Cover art of a haunted forest with misty trees">
-                </figure>
-                <h3 class="title-playlist-card-section">Whispers in the dark haunted forest</h3>
-                <a href="#" class="playlist-play-button" role="button"
-                    aria-label="Start the playlist Whispers in the haunted forest">
-                    <span class="play-icon">▶</span>
-                    <span class="play-time">65 min. 02 sec</span>
-                </a>
-            </section>
-
-            <!-- Penguins adventuring in the Arctic -->
-
-            <section class="playlist-card-section">
-                <figure class="card-image-figure">
-                    <img class="playlist-image-cover" src="./assets/coverart-6.png"
-                        alt="Cover art of penguins adventuring in the Arctic ice">
-                </figure>
-                <h3 class="title-playlist-card-section">Penguins adventuring in the Arctic</h3>
-                <a href="#" class="playlist-play-button" role="button"
-                    aria-label="Start the playlist Penguins adventuring in the Arctic">
-                    <span class="play-icon">▶</span>
-                    <span class="play-time">67 min. 30 sec</span>
-                </a>
-            </section>
-
-            <!-- Best friends forever, cow and pig complete -->
-
-            <section class="playlist-card-section">
-                <figure class="card-image-figure">
-                    <img class="playlist-image-cover" src="./assets/coverart-1.png"
-                        alt="Cover art of a cow and a pig, best friends forever">
-                </figure>
-                <h3 class="title-playlist-card-section">Best friends forever, cow and pig complete</h3>
-                <a href="#" class="playlist-play-button" role="button"
-                    aria-label="Start the playlist Best friends forever, cow and pig complete">
-                    <span class="play-icon">▶</span>
-                    <span class="play-time">93 min. 21 sec</span>
-                </a>
-            </section>
-
-            <!-- Storytime adventures of the friendly turtle -->
-
-            <section class="playlist-card-section">
-                <figure class="card-image-figure">
-                    <img class="playlist-image-cover" src="./assets/coverart-2.png"
-                        alt="Cover art of a turtle skiing in the snow">
-                </figure>
-                <h3 class="title-playlist-card-section">Storytime adventures of the friendly turtle</h3>
-                <a href="#" class="playlist-play-button" role="button"
-                    aria-label="Start the playlist Storytime adventures of the friendly turtle">
-                    <span class="play-icon">▶</span>
-                    <span class="play-time">19 min. 45 sec</span>
-                </a>
-            </section>
-
-            <!-- Mama and baby piglet's adventures -->
-
-            <section class="playlist-card-section">
-                <figure class="card-image-figure">
-                    <img class="playlist-image-cover" src="./assets/coverart-3.png"
-                        alt="Cover art of a mother and baby pig on an adventure">
-                </figure>
-                <h3 class="title-playlist-card-section">Mama and baby piglet's adventures</h3>
-                <a href="#" class="playlist-play-button" role="button"
-                    aria-label="Start the playlist Mama and baby piglet's adventures">
-                    <span class="play-icon">▶</span>
-                    <span class="play-time">11 min. 23 sec</span>
-                </a>
             </section>
 
         </article>
@@ -410,14 +268,16 @@
         <!-- All stories cards overzicht -->
 
         <h2 class="title-playlist-article">All stories</h2>
+        <p class="sub-text-title">Browse through a collection of curated playlists, or create your own to suit every mood and moment.</p>
+
         <button type="button" class="filter-button-1">---------</button>
         <button type="button" class="filter-button-2">---------</button>
-        <a href="./html/allstories.html">
+        <a href="./allstories.html">
             <button type="button" class="filter-button-3">
                 All stories
             </button>
         </a>
-        
+
 
         <!-- story card 1 -->
 
@@ -473,7 +333,8 @@
                                     d="M12 7.757v8.486M7.757 12h8.486M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
                         </button>
-                        <button class="color-code-4" aria-label="more information about the voice of the speaker" popovertarget="popover-colors">
+                        <button class="color-code-4" aria-label="more information about the voice of the speaker"
+                            popovertarget="popover-colors">
                             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                                 viewBox="0 0 24 24">
