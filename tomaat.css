@@ -21,8 +21,6 @@
   @media (min-width: 800px) {
     top: 30em;
   }
-
-  
 }
 
 form {
@@ -76,16 +74,14 @@ label {
 }
 
 /* vooropenen en sluiten popup */
-
-/* form dicht */
-.close-open-form {
-  visibility: hidden;
-  transform: translateY(100%);
-  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0.5s;
+.popover-section {
+visibility: hidden;
+transform: translateY(100%);
+transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0.5s;
 }
 
-/* form open */
-#form-popup:not(.close-open-form) {
+/* form open en sluiten */
+.open-and-close-form {
   visibility: visible;
   transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s ease;

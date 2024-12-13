@@ -19,7 +19,7 @@ document
   .getElementById("open-dropdown-button")
   .addEventListener("click", function () {
     const dropDownMenu = document.getElementById("form-popup");
-    dropDownMenu.classList.remove("close-open-form");
+    dropDownMenu.classList.toggle("open-and-close-form", "popover-section");
   });
 
 // sluiten van de form
@@ -27,7 +27,7 @@ document
   .getElementById("close-dropdown-button")
   .addEventListener("click", function () {
     const dropDownMenu = document.getElementById("form-popup");
-    dropDownMenu.classList.add("close-open-form");
+    dropDownMenu.classList.toggle("open-and-close-form");
   });
 
 // ---------------------------------------------------
