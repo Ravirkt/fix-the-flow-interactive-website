@@ -42,9 +42,9 @@ document
     const imageUpload = document.getElementById("image-upload");
     const titleInput = document.getElementById("title-input").value;
 
-    // Controleer of er een bestand is geselecteerd en een titel is ingevuld
+    // controlen of form leeg is
     // if (!imageUpload.files || imageUpload.files.length === 0 || !titleInput) {
-    //   alert('Vul zowel een afbeelding als een titel in!');
+    //   alert('teste etetetststtdtete');
     //   return;
     // }
 
