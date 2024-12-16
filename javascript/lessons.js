@@ -41,11 +41,15 @@ document
     // de form elementen in een variabele zetten
     const imageUpload = document.getElementById("image-upload");
     const titleInput = document.getElementById("title-input").value;
+    // const test = document.getElementById("test");
 
     // controlen of form leeg is
     // if (!imageUpload.files || imageUpload.files.length === 0 || !titleInput) {
     //   alert('teste etetetststtdtete');
     //   return;
+    // } else {
+    //   test.classList.toggle("even-kijken")
+      
     // }
 
     // nieuwe section maken en class toevoegen
@@ -123,8 +127,14 @@ document
     newCard.appendChild(datePlaylist);
 
     // de nieuwe card toevoegen aan de container met alle andere cards
-    document.querySelector(".playlist-section").appendChild(newCard);
+    const playlistSection = document.querySelector(".playlist-section");
 
+    // de eerste card zoeken , dat is de button card
+    const firstCardButton = document.getElementById("open-dropdown-button");
+
+    // Voeg de nieuwe card altijd na de knop toe
+    playlistSection.insertBefore(newCard, firstCardButton.nextElementSibling);
+    
     // de inputvelden leegmaken voor weer nieuwe gegevens
     document.getElementById("image-upload").value = "";
     document.getElementById("title-input").value = "";
