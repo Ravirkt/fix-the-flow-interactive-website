@@ -3,14 +3,12 @@
 document.getElementById("scroll-button").addEventListener("click", function () {
   // playlist-section is de parent-container waar alle playlist-cards in zitten.
   const playlistSection = document.querySelector(".playlist-section");
-  // geeft aan dat je wil gaan scrollen
+  // Scroll naar einde van container
   playlistSection.scrollTo({
-    // geeft aan dat je de gehele breedte naar rechts wilt scrollen
-    left: playlistSection.scrollWidth,
-    //zorgt voor een smooth scrolbeweging
-    behavior: "smooth",
+    left: playlistSection.scrollWidth
   });
 });
+
 
 // ---------------------------------------------------
 

@@ -31,6 +31,13 @@ header {
   color: white;
 } */
 
+
+/* scroll button voor all playlist om naar rechts te scrollen */
+.playlist-section {
+  scroll-behavior: smooth;
+}
+
+
 .page-title {
   grid-column: 2 / 3;
   grid-row: 1;
