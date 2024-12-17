@@ -33,6 +33,7 @@ document
 // ---------------------------------------------------
 
 // new playlist card maken
+const dropDownMenu = document.getElementById("form-popup"); // Dit selecteert de form popup
 
 // een click event voor de button waarmee de form geopend word
 document
@@ -138,4 +139,8 @@ document
     // de inputvelden leegmaken voor weer nieuwe gegevens
     document.getElementById("image-upload").value = "";
     document.getElementById("title-input").value = "";
+
+    if (newCard) {
+      dropDownMenu.classList.toggle("open-and-close-form"); 
+    }
   });
