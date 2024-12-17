@@ -1,14 +1,28 @@
 // voor de scroljlknop
 // click event . dit luistert of er op de knop wordt gedrukt
-document.getElementById("scroll-button").addEventListener("click", function () {
-  // playlist-section is de parent-container waar alle playlist-cards in zitten.
-  const playlistSection = document.querySelector(".playlist-section");
-  // Scroll naar einde van container
-  playlistSection.scrollTo({
-    left: playlistSection.scrollWidth
-  });
-});
+document
+  .getElementById("scroll-button-right")
+  .addEventListener("click", function () {
+    // playlist-section is de parent-container waar alle playlist-cards in zitten.
+    const playlistSection = document.querySelector(".playlist-section");
 
+    // Scroll naar einde van container
+    playlistSection.scrollTo({
+      left: playlistSection.scrollWidth,
+    });
+  });
+
+document
+  .getElementById("scroll-button-left")
+  .addEventListener("click", function () {
+    // playlist-section is de parent-container waar alle playlist-cards in zitten.
+    const playlistSection = document.querySelector(".playlist-section");
+
+    // scrollen terug naar links aan begin van container
+    playlistSection.scrollTo({
+      left: 0,
+    });
+  });
 
 // ---------------------------------------------------
 
@@ -48,7 +62,7 @@ document
     //   return;
     // } else {
     //   test.classList.toggle("even-kijken")
-      
+
     // }
 
     // nieuwe section maken en class toevoegen
@@ -101,7 +115,7 @@ document
     playButton.setAttribute("role", "button");
     playButton.setAttribute("aria-label", `Start the playlist ${titleInput}`);
 
-// span element maken en class toevoegen
+    // span element maken en class toevoegen
     const datePlaylist = document.createElement("span");
     datePlaylist.classList.add("add-date-playlist");
     datePlaylist.textContent = "24/02/24";
@@ -133,12 +147,12 @@ document
 
     // Voeg de nieuwe card altijd na de knop toe
     playlistSection.insertBefore(newCard, firstCardButton.nextElementSibling);
-    
+
     // de inputvelden leegmaken voor weer nieuwe gegevens
     document.getElementById("image-upload").value = "";
     document.getElementById("title-input").value = "";
 
     if (newCard) {
-      dropDownMenu.classList.toggle("open-and-close-form"); 
+      dropDownMenu.classList.toggle("open-and-close-form");
     }
   });
