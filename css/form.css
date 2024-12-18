@@ -67,6 +67,8 @@ label {
   color: white;
   background-color: rgb(76, 30, 139);
   border: none;
+  cursor: pointer;         
+
 
   &:hover {
     color: rgb(130, 120, 120);
@@ -112,6 +114,10 @@ transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0.5s;
 
 /* form togglen */
 
+.even-kijken {
+  animation-name: blabla;
+  animation-duration: 5s;
+}
 /* pulse border animatie */
 @keyframes pulse-border {
   0% {
