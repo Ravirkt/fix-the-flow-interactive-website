@@ -1,30 +1,47 @@
 # Intro
 Tumi-Mundo is een platform dat zich richt op het verbeteren en stimuleren van de taalontwikkeling van baby's van 6 maanden tot een jaar. Dit is belangrijk omdat een goede taalontwikkeling veel voordelen heeft, zoals het verbeteren van het leerproces, het verminderen van geestelijke gezondheidsproblemen en het vergroten van sociale vaardigheden.
 
-Als schoolproject heb ik de opdracht gekregen van Tumi Mundo om de frontend van hun website te maken. Het algemene doel van dit project is om de aangeleverde ontwerpen en functionaliteiten te realiseren. Ik had de vrijheid om een ander design te kiezen en zelf te bepalen welke pagina of functionaliteit de meeste prioriteit kreeg.
-
-https://github.com/Ravirkt/the-client-website <br>
-https://github.com/Ravirkt/all-human-accessible-website <br>
-https://github.com/Ravirkt/look-and-feel-corporate-identity
-
+Als schoolproject heb ik de opdracht gekregen van Tumi Mundo om de frontend van hun website te maken. Het algemene doel van dit project is om de aangeleverde ontwerpen en functionaliteiten te realiseren. 
 
 
 ## Inhoudsopgave
 - [Intro](#intro)
   - [Inhoudsopgave](#inhoudsopgave)
   - [Beschrijving](#beschrijving)
+  - [Het ontwerp](#het-ontwerp)
+    - [Create playlist button](#create-playlist-button)
+    - [open/close form](#openclose-form)
+    - [Submit form](#submit-form)
   - [Kenmerken](#kenmerken)
     - [HTMl-structuur](#html-structuur)
     - [CSS](#css)
     - [Javascript](#javascript)
 
 ## Beschrijving
-In de vijfde sprint heb ik me gefocust op het ontwerpen en maken van een interactief element op de lessons pagina. 
+De nadruk van deze sprint was het maken van een interactieve element. Het interactieve element dan ik wilde gaan realiseren is de interacties die de gebruiker moet uitvoeren om een playlist aan te maken. het is hierbij de bedoeling dat de gebruiker op een button klikt om vervolgens een form te laten verschijnen. In de form kan de gebruiker een cover afbeelding uploaden en de playlist een titel geven. Als de gebruiker vervolgens op de submit knop drukt zal de playlist card tevoorschijn komen tussen de andere bestaande playlists. 
 
- stories pagina. De lessons pagina is de pagina waarin de gebruiker een playlist kan aanmaken en een overzicht ziet van alle playlists. Ook bevat deze pagina een deel van de stories. De all stories pagina bevat een overzicht van alle stories die er op dit moment zijn. Op de pagina heb ik voornamelijk de feedback verwerkt die ik voorgaande sprint heb gekregen van de opdrachtgever.
 
- src="./assets/1EA0528C-C79F-4D2E-9F7D-4AAC97890CB4_1_102_o.jpeg" alt="iphone-view-1" style="width:400px;"/>
-<img src="./assets/CPT2412181134-813x707.gif" alt="macbook-pro-view-1" style="width:400px;"/>
+## Het ontwerp
+
+### Create playlist button
+Het ontwerp van de button om de form te laten verschijnen is hetzelfde gebleven als de vorige sprint. Bij het ontwerp van de button heb ik goed nagedacht of de button duidelijk maakt waarvoor het kan worden gebruikt. Om duidelijk te maken dat de button klikbaar is heb ik hover-effecten en een cursor pointer gebruikt.
+
+<br>
+<img src="./assets/button-hover.gif" alt="button-hover" style="width:200px;"/>
+
+
+### open/close form
+Als er op de create playlist button wordt gedrukt, schuift de form van beneden naar boven met een animatie. Dit maakt voor de gebruiker duidelijk dat de klik op de button iets heeft laten gebeuren. De form heeft zelf ook een button waarmee de gebruiker de form kan sluiten. De form schuift vervolgens met een vloeiende animatie naar beneden.
+
+<br>
+<img src="./assets/form.gif" alt="form-open-close" style="width:300px;"/>
+
+
+### Submit form
+Doormiddel van labels, placeholders en hovers word duidelijk vermeldt en zichtbaar gemaakt dat de elementen input nodig hebben van de gebruiker. De gebruiker kan de playlist een naam geven en een cover afbeelding. Er wordt gecontroleerd of beide input-forms ingevuldt zijn. Is dit niet het geval wordt dit aangegeven. De form kan pas worden verzonden als beide input-forms ingevuldt zijn. Als de gebruiker de informatie heeft ingevoerd en vervolgens op de knop "make playlist" klikt sluit de form automatisch. Dit laat de gebruiker zien dat de handeling is gelukt. Uiteindelijk is het voor extra feedforward om de card met een zichtbare animatie tevoorschijn te laten komen. Zodat de gebruiker extra duidelijkheid heeft.
+
+<br>
+<img src="./assets/form-submit.gif" alt="form-submit" style="width:300px;"/>
 
 
 ## Kenmerken
@@ -36,5 +53,16 @@ Ik heb de standaard HTML-structuur gebruikt om de applicatie te bouwen. Dit maak
 Voor de CSS heb ik me gefocust op zowel de layout als de styling van de applicatie. Ik heb ervoor gekozen om de basis van het ontwerp dicht bij de aangeleverde designs te houden, Tegelijkertijd heb ik mijn eigen ideeën toegevoegd om het ontwerp eigen te maken. Ook heb ik goed geluisterd naar de feedback die ik heb ontvangen van voorgaande sprints. Deze sprint heb ik ook gebruik gemaakt van een gezamelijke stylesheet dan mogelijk maakt om basis styling gezamelijk te houden.
 
 ### Javascript
-In de lessons pagina heb ik javascript gebruikt voor een scrollfunctie. Deze functionaliteit was niet aanwezig in de aangeleverde design. Tijdens het testen van de gebruiksvriendelijkheid kwam ik erachter om dit te maken. De playlist cards worden naast elkaar weergegeven waardoor er een hele rij onstaat. Dit kan irritant zijn voor de gebruiker als je de laaste card wil bereiken. Met javascript heb ik een button gemaakt waarmee de gebruiker in een keer met een vloeiende beweging naar de meest recent gemaakte playlist (de laatste) wordt geleidt.
 
+Om de form values in de cards te krijgen heb ik gebruik gemaakt ```.value``` voor de titel. Dit heb ik vervolgens in een variabele gezet waardoor ik de value van de input gemakkelijk via de variabele kan benaderen. Voor de image is er andere syntax namelijk: ```    const selectedFile = imageUpload.files[0];```. Hier heb ik de value van de file input in de variabele ```selectedFile``` gezet.
+Deze forms worden natuurlijk van te voren eerst door ```getElementById``` geselecteerd.
+
+```const imageUpload = document.getElementById("image-upload");``` 
+```const titleInput = document.getElementById("title-input").value;```
+
+
+De interactieve elementen in de pagina zijn gemaakt met Javascript. het principe om de cards te maken doormiddel van de form heb ik gemaakt door de elementen van bestaande cards te maken in javscript met het ``` createElement``` method. Vervolgens heb ik classes toegevoegt met de ```classListadd``` method. Met ```appenChild``` heb ik vervolgens alle elementen in elkaar gevoegt naar behoren waardoor hetzelfde structuur is aangemaakt als de bestaande cards.
+
+Link naar volledige javacript met aanvullende commentaar per regel: https://github.com/Ravirkt/fix-the-flow-interactive-website/blob/07244c1972f9fdad779bcbf57ed1b995e80f1a3d/javascript/lessons.js#L47-L158
+
+<img src="./assets/card.gif" alt="form-submit" style="width:300px;"/>

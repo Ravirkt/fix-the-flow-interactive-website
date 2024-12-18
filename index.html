@@ -96,13 +96,15 @@
 
                 <div class="position-class">
                     <form id="add-playlist-form">
+
+                        <label for="text-input">Add playlist title</label>
+                        <input type="text" id="title-input" class="title-validation" placeholder="Insert playlist title" required>
+
                         <label for="image-upload">Add playlist cover</label>
                         <input type="file" id="image-upload" accept="image/png, image/jpg" class="image-validation" required>
 
-                        <label for="text-input">Add playlist title</label>
-                        <input type="text" id="title-input" class="title-validation" placeholder="Insert playlist title" required />
-
-                        <button id="add-card-button" type="submit">Make playlist</button>
+                        
+                        <button id="add-card-button" type="submit" >Make playlist</button>
                     </form>
                 </div>
             </section>
