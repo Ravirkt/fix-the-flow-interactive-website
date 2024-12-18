@@ -74,6 +74,28 @@ label {
 }
 
 /* submit button in de form */
+#add-card-button {
+  background-color: #4CAF50; 
+  color: white;              
+  font-size: 16px;           
+  padding: 12px 24px;        
+  border-radius: 25px;      
+  border: none;              
+  cursor: pointer;         
+  transition: all 0.3s ease; 
+}
+
+#add-card-button:hover {
+  background-color: #45a049; 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+#add-card-button:active {
+  background-color: #388e3c; 
+  transform: translateY(2px); 
+}
+
 /* vooropenen en sluiten popup */
 .popover-section {
 visibility: hidden;

@@ -54,7 +54,7 @@ Voor de CSS heb ik me gefocust op zowel de layout als de styling van de applicat
 
 ### Javascript
 
-Om de form values in de cards te krijgen heb ik gebruik gemaakt ```.value``` voor de titel. Dit heb ik vervolgens in een variabele gezet waardoor ik de value van de input gemakkelijk via de variabele kan benaderen. Voor de image is er andere syntax namelijk: ```    const selectedFile = imageUpload.files[0];```. Hier heb ik de value van de file input in de variabele ```selectedFile``` gezet.
+Om de form values in de cards te krijgen heb ik gebruik gemaakt ```.value``` voor de titel. Dit heb ik vervolgens in een variabele gezet waardoor ik de value van de input gemakkelijk via de variabele kan benaderen. Voor de image is er andere syntax namelijk: ```const selectedFile = imageUpload.files[0];```. Hier heb ik de value van de file input in de variabele ```selectedFile``` gezet.
 Deze forms worden natuurlijk van te voren eerst door ```getElementById``` geselecteerd.
 
 ```const imageUpload = document.getElementById("image-upload");``` 
