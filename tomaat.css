@@ -69,10 +69,11 @@ label {
   border: none;
 
   &:hover {
-    color: black;
+    color: rgb(130, 120, 120);
   }
 }
 
+/* submit button in de form */
 /* vooropenen en sluiten popup */
 .popover-section {
 visibility: hidden;
