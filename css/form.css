@@ -116,9 +116,8 @@ label {
 /* animatie klein naar groot */
 @keyframes scale {
   0% {
-    transform: scale(0.5);
+    transform: scale(0);
     opacity: 0;
-    transform: rotate(300deg);
 
   }
   100% {
