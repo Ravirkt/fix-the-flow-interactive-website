@@ -145,14 +145,25 @@ document
     // de eerste card zoeken , dat is de button card
     const firstCardButton = document.getElementById("open-dropdown-button");
 
-    // Voeg de nieuwe card altijd na de knop toe
+    // card toeveogen na de eerste card
     playlistSection.insertBefore(newCard, firstCardButton.nextElementSibling);
 
     // de inputvelden leegmaken voor weer nieuwe gegevens
     document.getElementById("image-upload").value = "";
     document.getElementById("title-input").value = "";
 
+    // dit is voor het sluiten van de form als de nieuwe card is gemaakt
     if (newCard) {
       dropDownMenu.classList.toggle("open-and-close-form");
     }
+
+  // voor de animatie als een card wordt toegeveogt
+      newCard.classList.add("animation-playlist-card");
+    
+
   });
+
+
+
+
+  

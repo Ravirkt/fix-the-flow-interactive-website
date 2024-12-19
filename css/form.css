@@ -67,8 +67,7 @@ label {
   color: white;
   background-color: rgb(76, 30, 139);
   border: none;
-  cursor: pointer;         
-
+  cursor: pointer;
 
   &:hover {
     color: rgb(130, 120, 120);
@@ -77,32 +76,32 @@ label {
 
 /* submit button in de form */
 #add-card-button {
-  background-color: #4CAF50; 
-  color: white;              
-  font-size: 16px;           
-  padding: 12px 24px;        
-  border-radius: 25px;      
-  border: none;              
-  cursor: pointer;         
-  transition: all 0.3s ease; 
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 #add-card-button:hover {
-  background-color: #45a049; 
-  transform: translateY(-2px); 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 #add-card-button:active {
-  background-color: #388e3c; 
-  transform: translateY(2px); 
+  background-color: #388e3c;
+  transform: translateY(2px);
 }
 
 /* vooropenen en sluiten popup */
 .popover-section {
-visibility: hidden;
-transform: translateY(100%);
-transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0.5s;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0.5s;
 }
 
 /* form open en sluiten */
@@ -112,25 +111,25 @@ transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0.5s;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* form togglen */
+/* animatie voor de playlist card */
 
-.even-kijken {
-  animation-name: blabla;
-  animation-duration: 5s;
-}
-/* pulse border animatie */
-@keyframes pulse-border {
+/* animatie klein naar groot */
+@keyframes scale {
   0% {
-    border-color: red;
-  }
-  50% {
-    border-color: transparent;
+    transform: scale(0.5);
+    opacity: 0;
   }
   100% {
-    border-color: red;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
-.pulse-border {
-  animation: pulse-border 1s infinite;
+.playlist-card-section {
+  opacity: 0;
+  animation: scale 0.7s ease-out forwards;
+}
+
+.playlist-card-section.animation-playlist-card {
+  opacity: 1;
 }
