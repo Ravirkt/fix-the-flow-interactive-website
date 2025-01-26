@@ -65,4 +65,4 @@ De interactieve elementen in de pagina zijn gemaakt met Javascript. het principe
 
 Link naar volledige javacript met aanvullende commentaar per regel: https://github.com/Ravirkt/fix-the-flow-interactive-website/blob/07244c1972f9fdad779bcbf57ed1b995e80f1a3d/javascript/lessons.js#L47-L158
 
-<img src="./assets/card.gif" alt="form-submit" style="width:300px;"/>
+<img src="./assets/CPT2501261826-835x775.gif" alt="form-submit" style="width:300px;"/>
